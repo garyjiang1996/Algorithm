@@ -7,15 +7,15 @@
 #include <stdio.h>
 
 long long pow1(int a,int b){
- if(b==0)
-  return 1;
- if(b&1){
-  return a*pow(a,b-1);
- }else{
-  long long mul;
-  mul=pow(a,b/2);
-  return mul*mul;
- }
+	if(b==0)
+		return 1;
+	if(b&1){
+		return a*pow(a,b-1);
+	}else{
+		long long mul;
+		mul=pow(a,b/2);
+		return mul*mul;
+	}
 }
 
 long long pow2(int base, int exp)
@@ -32,14 +32,14 @@ long long pow2(int base, int exp)
     return result;
 }
 
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
+int main(){
+	int base,exp;
+	long long y;
+	
+	printf("enter a base and its exp:\n");
+	while(~scanf("%d %d",&base,&exp)){
+		y=pow1(base,exp);
+		printf("%d^%d=%ld\n",base,exp,y); 
+	}
+	return 0;
 }
